@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zona Kawaii | Tienda de Mangas</title>
+    <title>Zona Kawaii | Manga Store</title>
 
-    <link rel="icon" href="img/logo del la pagina.png">
+    <link rel="icon" href="img/Logo zk.jpg">
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -27,31 +41,47 @@
         </div>
 
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#productos">Mangas</a>
-            <a href="#categorias">Categorías</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio">Home</a>
+            <a href="#productos">Manga</a>
+            <a href="#categorias">Categories</a>
+            <a href="#nosotros">About Us</a>
+            <a href="#contacto">Contact</a>
         </nav>
 
         <div class="acciones">
 
-            <input
-                type="text"
-                id="buscador"
-                placeholder="Buscar mangas..."
-            >
+            <div class="buscador-contenedor">
 
-            <button class="btn-buscar">🔍</button>
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Search manga..."
+                >
 
-            <button class="btn-carrito" id="abrirCarrito">
+                <button
+                    class="btn-buscar"
+                    id="btnBuscar">
+                    🔍
+                </button>
+
+            </div>
+
+            <button
+                class="btn-carrito"
+                id="abrirCarrito">
+
                 🛒
+
                 <span id="contadorCarrito">0</span>
+
             </button>
 
             <button
                 class="btn-login"
                 onclick="window.location.href='iniciosesion.html'">
-                Iniciar sesión
+
+                Login
+
             </button>
 
         </div>
@@ -65,14 +95,19 @@
 
         <section id="inicio" class="hero">
 
-            <button class="flecha izquierda" id="anterior">
+            <button
+                class="flecha izquierda"
+                id="anterior">
+
                 ‹
+
             </button>
+
 
             <div class="hero-contenido">
 
-                <p class="pequeno">
-                    MANGA DESTACADO
+                <p class="pequeno" id="categoriaHero">
+                    FEATURED MANGA
                 </p>
 
                 <h1 id="tituloManga">
@@ -80,36 +115,50 @@
                 </h1>
 
                 <p id="descripcionManga">
-                    Sangre, acción y locura en cada capítulo.
+                    Blood, action and madness in every chapter.
                 </p>
 
-                <button class="btn-rosa">
-                    Ver manga →
+                <button
+                    class="btn-rosa"
+                    id="btnHero">
+
+                    Explore Manga →
+
                 </button>
 
             </div>
+
 
             <div class="hero-imagen">
 
                 <img
                     id="imagenHero"
-                    src="img/manga1.jpg"
-                    alt="Manga destacado">
+                    src="img/Chainsawman.jpg"
+                    alt="Featured manga">
 
             </div>
 
-            <button class="flecha derecha" id="siguiente">
+
+            <button
+                class="flecha derecha"
+                id="siguiente">
+
                 ›
+
             </button>
 
         </section>
 
 
-        <!-- INDICADORES -->
+        <!-- ================= INDICADORES ================= -->
 
-        <div class="indicadores">
+        <div
+            class="indicadores"
+            id="indicadores">
 
             <span class="activo"></span>
+            <span></span>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -117,23 +166,81 @@
         </div>
 
 
+        <!-- ================= BENEFICIOS ================= -->
+
+        <section class="beneficios">
+
+            <div class="beneficio">
+
+                <span>📦</span>
+
+                <div>
+                    <h3>Fast Shipping</h3>
+                    <p>Receive your manga quickly and safely.</p>
+                </div>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <span>💳</span>
+
+                <div>
+                    <h3>Secure Payment</h3>
+                    <p>Your payments are always protected.</p>
+                </div>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <span>❤️</span>
+
+                <div>
+                    <h3>Manga Lovers</h3>
+                    <p>A store made for anime and manga fans.</p>
+                </div>
+
+            </div>
+
+
+            <div class="beneficio">
+
+                <span>⭐</span>
+
+                <div>
+                    <h3>Top Quality</h3>
+                    <p>Official manga editions and great quality.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- ================= PRODUCTOS ================= -->
 
-        <section id="productos" class="seccion-productos">
+        <section
+            id="productos"
+            class="seccion-productos">
 
             <div class="titulo-seccion">
 
                 <div>
+
                     <span class="corona">♛</span>
 
                     <h2>
-                        MANGAS
-                        <strong>DESTACADOS</strong>
+                        FEATURED
+                        <strong>MANGA</strong>
                     </h2>
+
                 </div>
 
                 <p>
-                    Los mejores títulos en un solo lugar ♡
+                    Discover your next favorite story ♡
                 </p>
 
             </div>
@@ -141,40 +248,58 @@
 
             <div class="productos-contenedor">
 
-                <button class="producto-flecha" id="productosAnterior">
+                <button
+                    class="producto-flecha"
+                    id="productosAnterior">
+
                     ‹
+
                 </button>
 
 
-                <div class="productos" id="listaProductos">
+                <div
+                    class="productos"
+                    id="listaProductos">
 
 
                     <!-- MANGA 1 -->
 
                     <article class="producto">
 
+                        <div class="etiqueta">
+                            BEST SELLER
+                        </div>
+
                         <img
-                            src="img/manga1.jpg"
+                            src="img/Chainsawman.jpg"
                             alt="Chainsaw Man">
 
-                        <h3>
-                            Chainsaw Man Vol. 1
-                        </h3>
+                        <div class="producto-info">
 
-                        <p class="precio">
-                            $8.500
-                        </p>
+                            <span class="genero">
+                                Action
+                            </span>
 
-                        <button
-                            class="btn-agregar"
-                            data-id="1"
-                            data-nombre="Chainsaw Man Vol. 1"
-                            data-precio="8500"
-                            data-imagen="img/manga1.jpg">
+                            <h3>
+                                Chainsaw Man Vol. 1
+                            </h3>
 
-                            🛒 Agregar al carrito
+                            <p class="precio">
+                                $8,500
+                            </p>
 
-                        </button>
+                            <button
+                                class="btn-agregar"
+                                data-id="1"
+                                data-nombre="Chainsaw Man Vol. 1"
+                                data-precio="8500"
+                                data-imagen="img/Chainsawman.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
 
                     </article>
 
@@ -183,28 +308,40 @@
 
                     <article class="producto">
 
+                        <div class="etiqueta">
+                            POPULAR
+                        </div>
+
                         <img
-                            src="img/manga2.jpg"
+                            src="img/jjk.jpg"
                             alt="Jujutsu Kaisen">
 
-                        <h3>
-                            Jujutsu Kaisen Vol. 1
-                        </h3>
+                        <div class="producto-info">
 
-                        <p class="precio">
-                            $7.800
-                        </p>
+                            <span class="genero">
+                                Supernatural
+                            </span>
 
-                        <button
-                            class="btn-agregar"
-                            data-id="2"
-                            data-nombre="Jujutsu Kaisen Vol. 1"
-                            data-precio="7800"
-                            data-imagen="img/manga2.jpg">
+                            <h3>
+                                Jujutsu Kaisen Vol. 1
+                            </h3>
 
-                            🛒 Agregar al carrito
+                            <p class="precio">
+                                $7,800
+                            </p>
 
-                        </button>
+                            <button
+                                class="btn-agregar"
+                                data-id="2"
+                                data-nombre="Jujutsu Kaisen Vol. 1"
+                                data-precio="7800"
+                                data-imagen="img/jjk.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
 
                     </article>
 
@@ -213,28 +350,40 @@
 
                     <article class="producto">
 
+                        <div class="etiqueta">
+                            CLASSIC
+                        </div>
+
                         <img
-                            src="img/manga3.jpg"
+                            src="img/onepiece.jpeg"
                             alt="One Piece">
 
-                        <h3>
-                            One Piece Vol. 1
-                        </h3>
+                        <div class="producto-info">
 
-                        <p class="precio">
-                            $7.200
-                        </p>
+                            <span class="genero">
+                                Adventure
+                            </span>
 
-                        <button
-                            class="btn-agregar"
-                            data-id="3"
-                            data-nombre="One Piece Vol. 1"
-                            data-precio="7200"
-                            data-imagen="img/manga3.jpg">
+                            <h3>
+                                One Piece Vol. 1
+                            </h3>
 
-                            🛒 Agregar al carrito
+                            <p class="precio">
+                                $7,200
+                            </p>
 
-                        </button>
+                            <button
+                                class="btn-agregar"
+                                data-id="3"
+                                data-nombre="One Piece Vol. 1"
+                                data-precio="7200"
+                                data-imagen="img/onepiece.jpeg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
 
                     </article>
 
@@ -243,28 +392,40 @@
 
                     <article class="producto">
 
+                        <div class="etiqueta">
+                            HIT
+                        </div>
+
                         <img
-                            src="img/manga4.jpg"
+                            src="img/shingeki.jpg"
                             alt="Attack on Titan">
 
-                        <h3>
-                            Attack on Titan Vol. 1
-                        </h3>
+                        <div class="producto-info">
 
-                        <p class="precio">
-                            $7.500
-                        </p>
+                            <span class="genero">
+                                Dark Fantasy
+                            </span>
 
-                        <button
-                            class="btn-agregar"
-                            data-id="4"
-                            data-nombre="Attack on Titan Vol. 1"
-                            data-precio="7500"
-                            data-imagen="img/manga4.jpg">
+                            <h3>
+                                Attack on Titan Vol. 1
+                            </h3>
 
-                            🛒 Agregar al carrito
+                            <p class="precio">
+                                $7,500
+                            </p>
 
-                        </button>
+                            <button
+                                class="btn-agregar"
+                                data-id="4"
+                                data-nombre="Attack on Titan Vol. 1"
+                                data-precio="7500"
+                                data-imagen="img/shingeki.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
 
                     </article>
 
@@ -273,28 +434,40 @@
 
                     <article class="producto">
 
+                        <div class="etiqueta">
+                            POPULAR
+                        </div>
+
                         <img
-                            src="img/manga5.jpg"
+                            src="img/spy.jpg"
                             alt="Spy x Family">
 
-                        <h3>
-                            Spy x Family Vol. 1
-                        </h3>
+                        <div class="producto-info">
 
-                        <p class="precio">
-                            $7.300
-                        </p>
+                            <span class="genero">
+                                Comedy
+                            </span>
 
-                        <button
-                            class="btn-agregar"
-                            data-id="5"
-                            data-nombre="Spy x Family Vol. 1"
-                            data-precio="7300"
-                            data-imagen="img/manga5.jpg">
+                            <h3>
+                                Spy x Family Vol. 1
+                            </h3>
 
-                            🛒 Agregar al carrito
+                            <p class="precio">
+                                $7,300
+                            </p>
 
-                        </button>
+                            <button
+                                class="btn-agregar"
+                                data-id="5"
+                                data-nombre="Spy x Family Vol. 1"
+                                data-precio="7300"
+                                data-imagen="img/spy.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
 
                     </article>
 
@@ -303,36 +476,304 @@
 
                     <article class="producto">
 
+                        <div class="etiqueta">
+                            BEST SELLER
+                        </div>
+
                         <img
-                            src="img/manga6.jpg"
+                            src="img/demonslayer.jpeg"
                             alt="Demon Slayer">
 
-                        <h3>
-                            Demon Slayer Vol. 1
-                        </h3>
+                        <div class="producto-info">
 
-                        <p class="precio">
-                            $7.400
-                        </p>
+                            <span class="genero">
+                                Fantasy
+                            </span>
 
-                        <button
-                            class="btn-agregar"
-                            data-id="6"
-                            data-nombre="Demon Slayer Vol. 1"
-                            data-precio="7400"
-                            data-imagen="img/manga6.jpg">
+                            <h3>
+                                Demon Slayer Vol. 1
+                            </h3>
 
-                            🛒 Agregar al carrito
+                            <p class="precio">
+                                $7,400
+                            </p>
 
-                        </button>
+                            <button
+                                class="btn-agregar"
+                                data-id="6"
+                                data-nombre="Demon Slayer Vol. 1"
+                                data-precio="7400"
+                                data-imagen="img/demonslayer.jpeg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANGA 7 -->
+
+                    <article class="producto">
+
+                        <div class="etiqueta">
+                            NEW
+                        </div>
+
+                        <img
+                            src="img/solo leveling.jpg"
+                            alt="Solo Leveling">
+
+                        <div class="producto-info">
+
+                            <span class="genero">
+                                Action
+                            </span>
+
+                            <h3>
+                                Solo Leveling Vol. 1
+                            </h3>
+
+                            <p class="precio">
+                                $8,200
+                            </p>
+
+                            <button
+                                class="btn-agregar"
+                                data-id="7"
+                                data-nombre="Solo Leveling Vol. 1"
+                                data-precio="8200"
+                                data-imagen="img/solo leveling.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANGA 8 -->
+
+                    <article class="producto">
+
+                        <div class="etiqueta">
+                            POPULAR
+                        </div>
+
+                        <img
+                            src="img/bleach.jpeg"
+                            alt="Bleach">
+
+                        <div class="producto-info">
+
+                            <span class="genero">
+                                Action
+                            </span>
+
+                            <h3>
+                                Bleach Vol. 1
+                            </h3>
+
+                            <p class="precio">
+                                $7,600
+                            </p>
+
+                            <button
+                                class="btn-agregar"
+                                data-id="8"
+                                data-nombre="Bleach Vol. 1"
+                                data-precio="7600"
+                                data-imagen="img/bleach.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANGA 9 -->
+
+                    <article class="producto">
+
+                        <div class="etiqueta">
+                            CLASSIC
+                        </div>
+
+                        <img
+                            src="img/naturo.jpg"
+                            alt="Naruto">
+
+                        <div class="producto-info">
+
+                            <span class="genero">
+                                Ninja
+                            </span>
+
+                            <h3>
+                                Naruto Vol. 1
+                            </h3>
+
+                            <p class="precio">
+                                $7,500
+                            </p>
+
+                            <button
+                                class="btn-agregar"
+                                data-id="9"
+                                data-nombre="Naruto Vol. 1"
+                                data-precio="7500"
+                                data-imagen="img/naruto.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANGA 10 -->
+
+                    <article class="producto">
+
+                        <div class="etiqueta">
+                            NEW
+                        </div>
+
+                        <img
+                            src="img/mha.jpg"
+                            alt="My Hero Academia">
+
+                        <div class="producto-info">
+
+                            <span class="genero">
+                                Superhero
+                            </span>
+
+                            <h3>
+                                My Hero Academia Vol. 1
+                            </h3>
+
+                            <p class="precio">
+                                $7,700
+                            </p>
+
+                            <button
+                                class="btn-agregar"
+                                data-id="10"
+                                data-nombre="My Hero Academia Vol. 1"
+                                data-precio="7700"
+                                data-imagen="img/myhero.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANGA 11 -->
+
+                    <article class="producto">
+
+                        <div class="etiqueta">
+                            ROMANCE
+                        </div>
+
+                        <img
+                            src="img/kaguya sama.jpg"
+                            alt="Kaguya-sama">
+
+                        <div class="producto-info">
+
+                            <span class="genero">
+                                Romance
+                            </span>
+
+                            <h3>
+                                Kaguya-sama Vol. 1
+                            </h3>
+
+                            <p class="precio">
+                                $7,100
+                            </p>
+
+                            <button
+                                class="btn-agregar"
+                                data-id="11"
+                                data-nombre="Kaguya-sama Vol. 1"
+                                data-precio="7100"
+                                data-imagen="img/kaguyasama.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANGA 12 -->
+
+                    <article class="producto">
+
+                        <div class="etiqueta">
+                            CLASSIC
+                        </div>
+
+                        <img
+                            src="img/dath note.jpg"
+                            alt="Death Note">
+
+                        <div class="producto-info">
+
+                            <span class="genero">
+                                Mystery
+                            </span>
+
+                            <h3>
+                                Death Note Vol. 1
+                            </h3>
+
+                            <p class="precio">
+                                $7,900
+                            </p>
+
+                            <button
+                                class="btn-agregar"
+                                data-id="12"
+                                data-nombre="Death Note Vol. 1"
+                                data-precio="7900"
+                                data-imagen="img/deathnote.jpg">
+
+                                🛒 Add to cart
+
+                            </button>
+
+                        </div>
 
                     </article>
 
                 </div>
 
 
-                <button class="producto-flecha" id="productosSiguiente">
+                <button
+                    class="producto-flecha"
+                    id="productosSiguiente">
+
                     ›
+
                 </button>
 
             </div>
@@ -342,36 +783,102 @@
 
         <!-- ================= CATEGORIAS ================= -->
 
-        <section id="categorias" class="categorias">
+        <section
+            id="categorias"
+            class="categorias">
 
-            <h2>
-                Explorar por categoría
-            </h2>
+            <div class="titulo-centro">
+
+                <span>EXPLORE</span>
+
+                <h2>
+                    MANGA <strong>GENRES</strong>
+                </h2>
+
+                <p>
+                    Find stories that match your mood.
+                </p>
+
+            </div>
+
 
             <div class="categorias-grid">
 
                 <div class="categoria">
+
                     <span>⚔️</span>
-                    <h3>Shonen</h3>
-                    <p>Acción y aventuras</p>
+
+                    <h3>Action</h3>
+
+                    <p>
+                        Battles, heroes and unforgettable adventures.
+                    </p>
+
                 </div>
 
+
                 <div class="categoria">
+
                     <span>💕</span>
+
                     <h3>Romance</h3>
-                    <p>Historias de amor</p>
+
+                    <p>
+                        Love stories full of emotions.
+                    </p>
+
                 </div>
 
+
                 <div class="categoria">
+
                     <span>👻</span>
-                    <h3>Terror</h3>
-                    <p>Historias oscuras</p>
+
+                    <h3>Horror</h3>
+
+                    <p>
+                        Dark stories that will keep you awake.
+                    </p>
+
                 </div>
 
+
                 <div class="categoria">
+
                     <span>✨</span>
-                    <h3>Fantasia</h3>
-                    <p>Mundos increíbles</p>
+
+                    <h3>Fantasy</h3>
+
+                    <p>
+                        Magical worlds and incredible characters.
+                    </p>
+
+                </div>
+
+
+                <div class="categoria">
+
+                    <span>😂</span>
+
+                    <h3>Comedy</h3>
+
+                    <p>
+                        Fun stories full of unforgettable moments.
+                    </p>
+
+                </div>
+
+
+                <div class="categoria">
+
+                    <span>🔮</span>
+
+                    <h3>Mystery</h3>
+
+                    <p>
+                        Secrets, mysteries and unexpected twists.
+                    </p>
+
                 </div>
 
             </div>
@@ -379,18 +886,87 @@
         </section>
 
 
+        <!-- ================= NOSOTROS ================= -->
+
+        <section
+            id="nosotros"
+            class="nosotros">
+
+            <div class="nosotros-texto">
+
+                <span class="subtitulo">
+                    WELCOME TO ZONA KAWAII
+                </span>
+
+                <h2>
+                    YOUR NEXT
+                    <strong>ADVENTURE</strong>
+                    STARTS HERE.
+                </h2>
+
+                <p>
+                    Zona Kawaii is a manga store created for fans
+                    who love discovering new stories, characters
+                    and worlds.
+                </p>
+
+                <p>
+                    From action and fantasy to romance and mystery,
+                    we want to make it easy for you to find your
+                    next favorite manga.
+                </p>
+
+                <button
+                    class="btn-rosa"
+                    onclick="document.getElementById('productos').scrollIntoView()">
+
+                    Browse Manga →
+
+                </button>
+
+            </div>
+
+
+            <div class="nosotros-decoracion">
+
+                <div class="burbuja burbuja1">
+                    ✦
+                </div>
+
+                <div class="burbuja burbuja2">
+                    ♡
+                </div>
+
+                <div class="burbuja burbuja3">
+                    ★
+                </div>
+
+                <div class="texto-kawaii">
+                    KAWAII!
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 
     <!-- ================= CARRITO ================= -->
 
-    <aside class="carrito" id="carrito">
+    <aside
+        class="carrito"
+        id="carrito">
 
         <div class="carrito-header">
 
             <h2>
-                🛒 Tu carrito
-                <span id="cantidadCarrito">0</span>
+                🛒 Your Cart
+
+                <span id="cantidadCarrito">
+                    0
+                </span>
+
             </h2>
 
             <button id="cerrarCarrito">
@@ -405,7 +981,7 @@
             id="listaCarrito">
 
             <p class="carrito-vacio">
-                Tu carrito está vacío ♡
+                Your cart is empty ♡
             </p>
 
         </div>
@@ -425,8 +1001,9 @@
 
             </div>
 
+
             <button class="btn-pagar">
-                Finalizar compra
+                Checkout
             </button>
 
         </div>
@@ -434,7 +1011,7 @@
     </aside>
 
 
-    <!-- FONDO DEL CARRITO -->
+    <!-- ================= FONDO CARRITO ================= -->
 
     <div
         class="fondo-carrito"
@@ -455,7 +1032,11 @@
                 </h2>
 
                 <p>
-                    Tu tienda favorita de mangas.
+                    Your favorite manga store.
+                </p>
+
+                <p>
+                    Discover new worlds, stories and characters.
                 </p>
 
             </div>
@@ -464,7 +1045,32 @@
             <div>
 
                 <h3>
-                    Contacto
+                    Quick Links
+                </h3>
+
+                <a href="#inicio">
+                    Home
+                </a>
+
+                <a href="#productos">
+                    Manga
+                </a>
+
+                <a href="#categorias">
+                    Categories
+                </a>
+
+                <a href="#nosotros">
+                    About Us
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
                 </h3>
 
                 <p>
@@ -481,7 +1087,7 @@
             <div>
 
                 <h3>
-                    Seguinos
+                    Follow Us
                 </h3>
 
                 <div class="redes">
@@ -507,7 +1113,7 @@
 
         <div class="copyright">
 
-            © 2026 Zona Kawaii - Todos los derechos reservados.
+            © 2026 Zona Kawaii — All rights reserved.
 
         </div>
 
