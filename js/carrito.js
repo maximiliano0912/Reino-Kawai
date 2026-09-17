@@ -9,35 +9,30 @@ const mangasHero = [
         categoria: "FEATURED MANGA",
         imagen: "img/Chainsawman.jpg"
     },
-
     {
         titulo: "JUJUTSU KAISEN",
         descripcion: "Curses, sorcery and intense battles await you.",
         categoria: "POPULAR MANGA",
         imagen: "img/jjk.jpg"
     },
-
     {
         titulo: "ONE PIECE",
         descripcion: "Set sail on an unforgettable pirate adventure.",
         categoria: "CLASSIC MANGA",
         imagen: "img/onepiece.jpeg"
     },
-
     {
         titulo: "ATTACK ON TITAN",
         descripcion: "Humanity fights for survival behind the walls.",
         categoria: "DARK FANTASY",
         imagen: "img/shingeki.jpg"
     },
-
     {
         titulo: "SPY X FAMILY",
         descripcion: "A fake family with secrets, missions and comedy.",
         categoria: "COMEDY MANGA",
         imagen: "img/spy.jpg"
     },
-
     {
         titulo: "DEMON SLAYER",
         descripcion: "A young demon slayer begins his dangerous journey.",
@@ -46,14 +41,12 @@ const mangasHero = [
     }
 ];
 
-
 let indiceHero = 0;
 
 const tituloManga = document.getElementById("tituloManga");
 const descripcionManga = document.getElementById("descripcionManga");
 const categoriaHero = document.getElementById("categoriaHero");
 const imagenHero = document.getElementById("imagenHero");
-
 const anterior = document.getElementById("anterior");
 const siguiente = document.getElementById("siguiente");
 
@@ -62,14 +55,18 @@ const indicadores = document.querySelectorAll(
 );
 
 
-/* CAMBIAR HERO */
+/* =========================
+   CAMBIAR HERO
+========================= */
 
 function mostrarHero(indice) {
 
     if (indice < 0) {
         indiceHero = mangasHero.length - 1;
+
     } else if (indice >= mangasHero.length) {
         indiceHero = 0;
+
     } else {
         indiceHero = indice;
     }
@@ -111,7 +108,9 @@ function mostrarHero(indice) {
 }
 
 
-/* BOTON ANTERIOR */
+/* =========================
+   BOTONES HERO
+========================= */
 
 anterior.addEventListener("click", () => {
 
@@ -122,8 +121,6 @@ anterior.addEventListener("click", () => {
 });
 
 
-/* BOTON SIGUIENTE */
-
 siguiente.addEventListener("click", () => {
 
     mostrarHero(indiceHero + 1);
@@ -133,7 +130,9 @@ siguiente.addEventListener("click", () => {
 });
 
 
-/* INDICADORES */
+/* =========================
+   INDICADORES
+========================= */
 
 indicadores.forEach((indicador, indice) => {
 
@@ -148,7 +147,9 @@ indicadores.forEach((indicador, indice) => {
 });
 
 
-/* CAMBIO AUTOMATICO */
+/* =========================
+   CAMBIO AUTOMÁTICO
+========================= */
 
 let temporizadorHero = setInterval(() => {
 
@@ -157,7 +158,9 @@ let temporizadorHero = setInterval(() => {
 }, 5000);
 
 
-/* REINICIAR TEMPORIZADOR */
+/* =========================
+   REINICIAR TEMPORIZADOR
+========================= */
 
 function reiniciarTemporizador() {
 
@@ -238,7 +241,9 @@ const totalCarrito =
     document.getElementById("totalCarrito");
 
 
-/* ABRIR */
+/* =========================
+   ABRIR CARRITO
+========================= */
 
 abrirCarrito.addEventListener("click", () => {
 
@@ -249,7 +254,9 @@ abrirCarrito.addEventListener("click", () => {
 });
 
 
-/* CERRAR */
+/* =========================
+   CERRAR CARRITO
+========================= */
 
 function cerrarCarritoFuncion() {
 
@@ -294,30 +301,54 @@ document.querySelectorAll(".btn-agregar").forEach(
                 boton.dataset.imagen;
 
 
+            /* BUSCAR SI YA ESTÁ EN EL CARRITO */
+
             const productoExistente =
                 carrito.find(
                     producto => producto.id === id
                 );
 
 
+            /* =========================
+               EVITAR PRODUCTOS DUPLICADOS
+            ========================= */
+
             if (productoExistente) {
 
-                productoExistente.cantidad++;
+                alert(
+                    "Este manga ya está en tu carrito."
+                );
 
-            } else {
-
-                carrito.push({
-                    id: id,
-                    nombre: nombre,
-                    precio: precio,
-                    imagen: imagen,
-                    cantidad: 1
-                });
+                return;
 
             }
 
 
+            /* =========================
+               AGREGAR PRODUCTO
+            ========================= */
+
+            carrito.push({
+
+                id: id,
+
+                nombre: nombre,
+
+                precio: precio,
+
+                imagen: imagen,
+
+                cantidad: 1
+
+            });
+
+
+            /* ACTUALIZAR CARRITO */
+
             actualizarCarrito();
+
+
+            /* ABRIR CARRITO */
 
             carritoElemento.classList.add(
                 "abierto"
@@ -326,6 +357,13 @@ document.querySelectorAll(".btn-agregar").forEach(
             fondoCarrito.classList.add(
                 "activo"
             );
+
+
+            /* CAMBIAR BOTÓN */
+
+            boton.textContent = "✓ Added";
+
+            boton.disabled = true;
 
         });
 
@@ -342,21 +380,30 @@ function actualizarCarrito() {
     listaCarrito.innerHTML = "";
 
 
+    /* CARRITO VACÍO */
+
     if (carrito.length === 0) {
 
         listaCarrito.innerHTML = `
+
             <p class="carrito-vacio">
+
                 Your cart is empty ♡
+
             </p>
+
         `;
 
     }
 
 
+    /* MOSTRAR PRODUCTOS */
+
     carrito.forEach(producto => {
 
         const item =
             document.createElement("div");
+
 
         item.classList.add(
             "item-carrito"
@@ -382,29 +429,21 @@ function actualizarCarrito() {
 
                 <div class="cantidad">
 
-                    <button
-                        onclick="cambiarCantidad('${producto.id}', -1)">
-                        -
-                    </button>
-
                     <span>
-                        ${producto.cantidad}
+                        1 unidad
                     </span>
 
                     <button
-                        onclick="cambiarCantidad('${producto.id}', 1)">
-                        +
-                    </button>
-
-                    <button
                         class="eliminar"
-                        onclick="eliminarProducto('${producto.id}')">
+                        onclick="eliminarProducto('${producto.id}')"
+                    >
                         ×
                     </button>
 
                 </div>
 
             </div>
+
         `;
 
 
@@ -419,42 +458,7 @@ function actualizarCarrito() {
 
 
 /* =========================
-   CAMBIAR CANTIDAD
-========================= */
-
-function cambiarCantidad(id, cambio) {
-
-    const producto =
-        carrito.find(
-            producto => producto.id === id
-        );
-
-
-    if (!producto) {
-        return;
-    }
-
-
-    producto.cantidad += cambio;
-
-
-    if (producto.cantidad <= 0) {
-
-        carrito =
-            carrito.filter(
-                producto => producto.id !== id
-            );
-
-    }
-
-
-    actualizarCarrito();
-
-}
-
-
-/* =========================
-   ELIMINAR
+   ELIMINAR PRODUCTO
 ========================= */
 
 function eliminarProducto(id) {
@@ -463,6 +467,25 @@ function eliminarProducto(id) {
         carrito.filter(
             producto => producto.id !== id
         );
+
+
+    /* VOLVER A ACTIVAR EL BOTÓN */
+
+    const boton =
+        document.querySelector(
+            `.btn-agregar[data-id="${id}"]`
+        );
+
+
+    if (boton) {
+
+        boton.disabled = false;
+
+        boton.textContent =
+            "🛒 Add to cart";
+
+    }
+
 
     actualizarCarrito();
 
@@ -482,11 +505,9 @@ function actualizarTotales() {
 
     carrito.forEach(producto => {
 
-        cantidad += producto.cantidad;
+        cantidad += 1;
 
-        total +=
-            producto.precio *
-            producto.cantidad;
+        total += producto.precio;
 
     });
 
@@ -536,9 +557,7 @@ buscador.addEventListener(
                 .toLowerCase();
 
 
-            if (
-                nombre.includes(texto)
-            ) {
+            if (nombre.includes(texto)) {
 
                 producto.style.display =
                     "";
@@ -557,7 +576,7 @@ buscador.addEventListener(
 
 
 /* =========================
-   BOTON CHECKOUT
+   CHECKOUT / COMPRAR
 ========================= */
 
 const botonPagar =
@@ -567,6 +586,8 @@ const botonPagar =
 botonPagar.addEventListener(
     "click",
     () => {
+
+        /* SI ESTÁ VACÍO */
 
         if (carrito.length === 0) {
 
@@ -579,9 +600,57 @@ botonPagar.addEventListener(
         }
 
 
+        /* CONFIRMAR COMPRA */
+
+        const confirmar =
+            confirm(
+                "¿Estás seguro de que querés realizar la compra?"
+            );
+
+
+        /* SI CANCELA */
+
+        if (!confirmar) {
+
+            return;
+
+        }
+
+
+        /* CONFIRMAR COMPRA */
+
         alert(
-            "Thank you for your purchase! Checkout will be available soon."
+            "¡Compra realizada con éxito! Gracias por comprar en Zona Kawaii ♡"
         );
+
+
+        /* VACIAR CARRITO */
+
+        carrito = [];
+
+
+        /* ACTUALIZAR CARRITO */
+
+        actualizarCarrito();
+
+
+        /* CERRAR CARRITO */
+
+        cerrarCarritoFuncion();
+
+
+        /* VOLVER A ACTIVAR TODOS LOS BOTONES */
+
+        document
+            .querySelectorAll(".btn-agregar")
+            .forEach(boton => {
+
+                boton.disabled = false;
+
+                boton.textContent =
+                    "🛒 Add to cart";
+
+            });
 
     }
 );
