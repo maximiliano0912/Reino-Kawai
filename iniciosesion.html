@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zona Kawaii | Login</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="pagina-autenticacion">
+
+        <section class="panel-marca">
+            <div class="marca-contenido">
+
+                <h1>ZONA KAWAII</h1>
+
+                <p>
+                    Welcome back, manga lover!
+                </p>
+
+                <div class="decoracion-manga">
+                    <span>✦</span>
+                    <span>♡</span>
+                    <span>★</span>
+                    <span>✿</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="contenedor-formulario">
+
+            <div class="tarjeta-autenticacion">
+
+                <a href="index.html" class="volver-tienda">
+                    ← Back to store
+                </a>
+
+
+                <div class="encabezado-formulario">
+
+                    <h2>Welcome back!</h2>
+
+                    <p>
+                        Log in to continue exploring your favorite manga.
+                    </p>
+
+                </div>
+
+
+                <form id="formLogin">
+
+                    <div class="grupo-formulario">
+
+                        <label for="emailLogin">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="emailLogin"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="grupo-formulario">
+
+                        <label for="passwordLogin">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="passwordLogin"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="boton-autenticacion">
+
+                        Log in
+
+                    </button>
+
+
+                    <p id="mensajeLogin" class="mensaje-formulario"></p>
+
+                </form>
+
+
+                <div class="separador">
+                    <span>Don't have an account?</span>
+                </div>
+
+
+                <a href="registro.html" class="boton-secundario">
+                    Create an account
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

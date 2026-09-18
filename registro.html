@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zona Kawaii | Create Account</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="pagina-autenticacion">
+
+        <section class="panel-marca">
+            <div class="marca-contenido">
+                <h1>ZONA KAWAII</h1>
+
+                <p>
+                    Your manga world starts here.
+                </p>
+
+                <div class="decoracion-manga">
+                    <span>✦</span>
+                    <span>♡</span>
+                    <span>★</span>
+                    <span>✿</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contenedor-formulario">
+
+            <div class="tarjeta-autenticacion">
+
+                <a href="index.html" class="volver-tienda">
+                    ← Back to store
+                </a>
+
+                <div class="encabezado-formulario">
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Join Zona Kawaii and discover your next favorite manga.
+                    </p>
+                </div>
+
+
+                <form id="formRegistro">
+
+                    <div class="grupo-formulario">
+                        <label for="nombreRegistro">Full name</label>
+
+                        <input
+                            type="text"
+                            id="nombreRegistro"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+
+                    <div class="grupo-formulario">
+                        <label for="emailRegistro">Email address</label>
+
+                        <input
+                            type="email"
+                            id="emailRegistro"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+
+                    <div class="grupo-formulario">
+                        <label for="passwordRegistro">Password</label>
+
+                        <input
+                            type="password"
+                            id="passwordRegistro"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required>
+
+                        <small>
+                            Password must contain at least 6 characters.
+                        </small>
+                    </div>
+
+
+                    <div class="grupo-formulario">
+                        <label for="confirmarPassword">Confirm password</label>
+
+                        <input
+                            type="password"
+                            id="confirmarPassword"
+                            placeholder="Repeat your password"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+
+                    <div class="grupo-terminos">
+
+                        <label class="checkbox-contenedor">
+
+                            <input
+                                type="checkbox"
+                                id="terminos"
+                                required>
+
+                            <span>
+                                I agree to the terms and conditions.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit" class="boton-autenticacion">
+                        Create account
+                    </button>
+
+
+                    <p id="mensajeRegistro" class="mensaje-formulario"></p>
+
+                </form>
+
+
+                <div class="separador">
+                    <span>Already have an account?</span>
+                </div>
+
+
+                <a href="iniciosesion.html" class="boton-secundario">
+                    Log in
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
