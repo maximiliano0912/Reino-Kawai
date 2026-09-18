@@ -1,0 +1,482 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f0e8;
+    color: #222;
+}
+
+
+/* ================================
+   PÁGINA DE AUTENTICACIÓN
+================================ */
+
+.pagina-autenticacion {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+
+/* ================================
+   PANEL DE MARCA
+================================ */
+
+.panel-marca {
+    background: #ff2f88;
+    border-right: 5px solid #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-marca::before {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 4px solid #111;
+    border-radius: 50%;
+
+    top: -180px;
+    left: -180px;
+
+    opacity: 0.15;
+}
+
+.panel-marca::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 4px solid #fff;
+    border-radius: 50%;
+
+    bottom: -160px;
+    right: -120px;
+
+    opacity: 0.2;
+}
+
+
+.marca-contenido {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.marca-contenido h1 {
+    font-family: "Bangers", cursive;
+    font-size: clamp(55px, 7vw, 100px);
+    letter-spacing: 3px;
+    color: white;
+
+    -webkit-text-stroke: 2px #111;
+
+    text-shadow:
+        5px 5px 0 #111;
+}
+
+.marca-contenido p {
+    margin-top: 15px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: white;
+}
+
+
+/* ================================
+   DECORACIÓN
+================================ */
+
+.decoracion-manga {
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    font-size: 45px;
+    color: white;
+}
+
+.decoracion-manga span:nth-child(2) {
+    transform: translateY(-25px);
+}
+
+.decoracion-manga span:nth-child(4) {
+    transform: translateY(20px);
+}
+
+
+/* ================================
+   CONTENEDOR DEL FORMULARIO
+================================ */
+
+.contenedor-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* ================================
+   TARJETA
+================================ */
+
+.tarjeta-autenticacion {
+    width: 100%;
+    max-width: 500px;
+
+    background: white;
+
+    border: 3px solid #111;
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 10px 10px 0 #111;
+}
+
+
+/* ================================
+   VOLVER
+================================ */
+
+.volver-tienda {
+    display: inline-block;
+
+    color: #111;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    transition: 0.2s;
+}
+
+.volver-tienda:hover {
+    color: #ff2f88;
+    transform: translateX(-3px);
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.encabezado-formulario {
+    margin-bottom: 30px;
+}
+
+.encabezado-formulario h2 {
+    font-family: "Bangers", cursive;
+
+    font-size: 45px;
+    letter-spacing: 1px;
+
+    color: #111;
+}
+
+.encabezado-formulario p {
+    margin-top: 8px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* ================================
+   CAMPOS
+================================ */
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.grupo-formulario input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid #222;
+    border-radius: 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.grupo-formulario input:focus {
+    border-color: #ff2f88;
+
+    box-shadow: 0 0 0 3px rgba(255, 47, 136, 0.15);
+}
+
+.grupo-formulario small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* ================================
+   TÉRMINOS
+================================ */
+
+.grupo-terminos {
+    margin: 5px 0 20px;
+}
+
+.checkbox-contenedor {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    font-size: 12px;
+    color: #555;
+
+    cursor: pointer;
+}
+
+.checkbox-contenedor input {
+    margin-top: 3px;
+
+    accent-color: #ff2f88;
+}
+
+
+/* ================================
+   BOTÓN PRINCIPAL
+================================ */
+
+.boton-autenticacion {
+    width: 100%;
+
+    border: 3px solid #111;
+    border-radius: 10px;
+
+    background: #ff2f88;
+    color: white;
+
+    padding: 14px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 4px 4px 0 #111;
+
+    transition: 0.2s;
+}
+
+.boton-autenticacion:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #111;
+}
+
+.boton-autenticacion:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+
+/* ================================
+   BOTÓN SECUNDARIO
+================================ */
+
+.boton-secundario {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 2px solid #111;
+    border-radius: 10px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #111;
+    background: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.boton-secundario:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* ================================
+   SEPARADOR
+================================ */
+
+.separador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 25px 0;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ddd;
+}
+
+.separador span {
+    white-space: nowrap;
+}
+
+
+/* ================================
+   MENSAJES
+================================ */
+
+.mensaje-formulario {
+    min-height: 22px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mensaje-exito {
+    color: #198754;
+}
+
+.mensaje-error {
+    color: #d62828;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+
+    .pagina-autenticacion {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-marca {
+        min-height: 280px;
+
+        border-right: none;
+        border-bottom: 5px solid #111;
+
+        padding: 30px;
+    }
+
+    .marca-contenido h1 {
+        font-size: 65px;
+    }
+
+    .marca-contenido p {
+        font-size: 15px;
+    }
+
+    .decoracion-manga {
+        margin-top: 25px;
+        font-size: 30px;
+        gap: 20px;
+    }
+
+    .contenedor-formulario {
+        padding: 30px 20px;
+    }
+
+    .tarjeta-autenticacion {
+        box-shadow: 6px 6px 0 #111;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .panel-marca {
+        min-height: 220px;
+    }
+
+    .marca-contenido h1 {
+        font-size: 48px;
+    }
+
+    .decoracion-manga {
+        display: none;
+    }
+
+    .contenedor-formulario {
+        padding: 25px 15px;
+    }
+
+    .tarjeta-autenticacion {
+        padding: 25px 20px;
+    }
+
+    .encabezado-formulario h2 {
+        font-size: 38px;
+    }
+}
